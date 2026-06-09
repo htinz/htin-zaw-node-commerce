@@ -1,12 +1,31 @@
-# Node-commerce
+# Htin-Zaw Node-Commerce API
 
 A full-stack e-commerce backend API built with Node.js, Express, and PostgreSQL.
 
 ## Project Overview
 
-Node-commerce is a personal portfolio project designed to demonstrate backend development skills, including RESTful API design, database management, authentication, and secure user session handling.
+Htin-Zaw Node-Commerce API is a personal portfolio project designed to demonstrate backend development skills, including RESTful API design, database management, authentication, and secure user session handling.
 
-The project simulates the core functionality of an e-commerce platform by providing endpoints for managing products, users, and orders.
+The project simulates the backend functionality of an e-commerce platform by providing RESTful API endpoints for managing products, users, and orders.
+
+## Project Status
+
+🚧 In Development
+
+Core REST API functionality is being implemented. JWT authentication and additional e-commerce features are currently in progress.
+
+Repository:
+https://github.com/htinz/htin-zaw-node-commerce
+
+## Environment Variables
+
+Create a `.env` file in the root directory and configure:
+
+```env
+PORT=5000
+DATABASE_URL=your_postgresql_connection_string
+JWT_SECRET=your_secret_key
+```
 
 ## Technologies Used
 
@@ -69,50 +88,66 @@ Example endpoints:
 
 ### Products
 
-GET /api/products
-
-GET /api/products/:id
-
-POST /api/products
-
-PUT /api/products/:id
-
+```http
+GET    /api/products
+GET    /api/products/:id
+POST   /api/products
+PUT    /api/products/:id
 DELETE /api/products/:id
+```
 
 ### Users
 
-POST /api/users/register
-
-POST /api/users/login
-
-GET /api/users/profile
+```http
+POST   /api/users/register
+POST   /api/users/login
+GET    /api/users/profile
+```
 
 ### Orders
 
-GET /api/orders
+```http
+GET    /api/orders
+POST   /api/orders
+GET    /api/orders/:id
+```
 
-POST /api/orders
+## Prerequisites
 
-GET /api/orders/:id
+- Node.js
+- PostgreSQL
+- npm
 
 ## Installation
 
 Clone the repository:
 
-git clone https://github.com/htinz/node-commerce.git
-
+```bash
+git clone https://github.com/htinz/htin-zaw-node-commerce.git
+```
 Navigate to the project directory:
 
-cd node-commerce
+```bash
+cd htin-zaw-node-commerce
+```
 
 Install dependencies:
 
+```bash
 npm install
+```
 
 Create a .env file and configure your environment variables.
 
 Start the development server:
 
+```bash
+npm run dev
+```
+
+## Running the Application
+
+```bash
 npm run dev
 
 ## Future Improvements
@@ -135,6 +170,10 @@ This project was created to strengthen practical skills in:
 * Authentication and security
 * Express.js architecture
 * Git version control
+
+## Disclaimer
+
+This project is currently under active development. Features and API endpoints may change as new functionality is implemented.
 
 ## Author
 
